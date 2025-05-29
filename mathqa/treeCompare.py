@@ -4,7 +4,7 @@ from collections import deque
 
 def compareTrees(Lfile, Rfile) -> float:
   """
-  Compare two XML trees and return a score based on their structure and branching nodes.
+  Compare two MathML trees and return a score based on their structure and branching nodes.
   The score is calculated based on the depth and complexity of the trees by way of scoreTree().
   
   Parameters:
@@ -142,7 +142,7 @@ def longestContigSubseqCount(Lpath, Rpath):
 def countBranching(Lpath, Rpath):
   LbranchingCounts = {}
   RbranchingCounts = {}
-  # yNeed to be specific because <mo> is in <mover>
+  # Need to be specific because <mo> is in <mover>
   for branchingNode in BRANCHING_NODES:
     for Lnode in Lpath:
       if isinstance(Lnode, int):
